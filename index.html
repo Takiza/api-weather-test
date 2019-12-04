@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+
+	    <meta charset="utf-8">   
+
+	    <title>Weather</title>
+
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	      
+	    <style type="text/css">
+    
+	    body {
+	              
+	        background: none;
+	              
+	    }
+	          
+	    .container {
+	        display: grid;
+			grid-template-columns: 40% 60%;      
+	        /*text-align: center;
+	        margin-top: 100px;
+	        width: 450px;*/
+	              
+	        }
+
+	        .container > div{
+			padding: 1em;
+			/*background-color: #ee6375;**/
+		}
+		.container > div.tab {
+			padding: 1em;
+			/*background-color: #ecc6cb;*/
+		}
+	          
+	          input {
+	              
+	              margin: 20px 0;
+	              
+	          }
+	          
+	          #weather {
+	              
+	              margin-top:15px;
+	              
+	          }
+	         
+	    </style>
+	      
+	</head>
+  	<body>
+    
+      	<div class="container">
+      		<div>
+      	
+	          	<h1>What's The Weather?</h1>
+	          
+	          	<form id="form">
+				  	<fieldset class="form-group">
+				    	<label for="city">Enter the name of a city.</label>
+				    	<input type="text" class="form-control" name="city" id="city" placeholder="London, Tokyo">
+				  	</fieldset>
+				  
+				  	<button class="btn btn-success" id="sub">Submit</button>
+				</form>
+			</div>
+			<div class="tab">
+				<table class="table table-striped">
+					<thead>
+					    <tr>
+						    <th scope="col">Date</th>
+						   	<th scope="col">Temperature</th>
+						    <th scope="col">Pressure</th>
+						    <th scope="col">Humidity</th>
+					    </tr>
+					</thead>
+					<tbody id="wt">
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+    <script src="main.js"></script>
+
+  </body>
+</html>
