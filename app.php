@@ -9,10 +9,7 @@
 
     $weather = "";
     $error = "";
-    //$city = json_decode($data_json, true);
     $city =  $_POST['city'];
-    //$city = 'London';
-
 
     $conn = new mysqli($host, $user, $password, $database);
 
@@ -33,7 +30,6 @@
     {
     
         $urlContents = file_get_contents("https://api.openweathermap.org/data/2.5/forecast?q=".urlencode($city).",uk&appid=4b6cbadba309b7554491c5dc66401886");
-        //print_r($urlContents);// die();
             
         $weatherArray = json_decode($urlContents, true);
             
